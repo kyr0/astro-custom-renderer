@@ -2,6 +2,15 @@
 
 This is a template for an Astro integration that implements a custom renderer. Custom renderers can be used to add custom, 3rd-party framework support to Astro or to render custom markup that is returned by components (e.g. a custom headless CMS VDOM, and basically anything you can think of).
 
+#### Invocation
+<img src="./invoke.png" />
+
+#### Custom Markup/VDOM
+<img src="./custom_functional_component.png" />
+
+#### Custom DOM rendering
+<img src="./render_result.png" />
+
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
