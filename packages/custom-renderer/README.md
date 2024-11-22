@@ -11,6 +11,9 @@ npm i -g pnpm
 
 # also install dependencies
 pnpm i
+
+# build
+pnpm run build
 ```
 
 ## 🚀 Project Structure
@@ -37,6 +40,5 @@ All commands are run from the root of the project, from a terminal:
 
 | Command       | Action                                                                                                                                                                                                                           |
 | :------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `pnpm run dev`    | Run in dev mode and check your custom renderer                                                    |
 | `pnpm run build` | Build for production  |
 | `pnpm run preview` | Build for production, then preview |
