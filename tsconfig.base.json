@@ -10,10 +10,6 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "verbatimModuleSyntax": true,
-    "stripInternal": true,
-    "baseUrl": ".",
-    "paths": {
-      "@custom-renderer/*": ["packages/custom-renderer/src/custom-renderer/*"]
-    }
+    "stripInternal": true
   }
 }

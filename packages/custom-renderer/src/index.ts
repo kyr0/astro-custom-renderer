@@ -2,14 +2,14 @@ import type { AstroIntegration, AstroRenderer, ContainerRenderer } from 'astro';
 
 const getRenderer = (): AstroRenderer => ({
     name: 'custom-renderer',
-    clientEntrypoint: '@custom-renderer/client',
-    serverEntrypoint: '@custom-renderer/server',
-})
+    clientEntrypoint: 'custom-renderer/client.js',
+    serverEntrypoint: 'custom-renderer/server.js',
+});
 
 export const getContainerRenderer = (): ContainerRenderer => ({
     name: 'custom-renderer',
-    serverEntrypoint: '@custom-renderer/server',
-})
+    serverEntrypoint: 'custom-renderer/server.js',
+});
 
 export default function (): AstroIntegration {
 	return {

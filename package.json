@@ -1,16 +1,46 @@
 {
-  "name": "astro-custom-renderer",
-  "type": "module",
-  "version": "0.0.1",
+  "name": "root",
   "private": true,
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+  "version": "1.1.1",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
   },
-  "dependencies": {
-    "astro": "^4.16.13"
+  "license": "MIT",
+  "description": "Custom Renderer / Custom Framework integration template for Astro.",
+  "keywords": [
+    "renderer",
+    "astro",
+    "custom-framework",
+    "astro-integration"
+  ],
+  "repository": {
+    "url": "git+https://github.com/kyr0/astro-custom-renderer.git",
+    "type": "git"
+  },
+  "scripts": {
+    "build": "turbo run build"
+  },
+  "author": "Aron Homberg <info@aron-homberg.de>",
+  "sideEffects": false,
+  "devDependencies": {
+    "@types/node": "^20.11.20",
+    "@biomejs/biome": "1.9.3",
+    "typescript": "^5.6.3",
+    "turbo": "^2.3.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": "^18.17.1 || ^20.3.0 || >=21.0.0"
+  },
+  "packageManager": "pnpm@9.13.2",
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowAny": [
+        "astro"
+      ]
+    }
   }
 }

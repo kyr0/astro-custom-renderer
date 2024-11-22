@@ -1,44 +1,37 @@
 # Astro Custom Frontend Framework / Custom Renderer Starter
 
-This is a template for an Astro integration that implements a custom renderer. Custom renderers can be used to add custom, 3rd-party framework support to Astro or to render custom markup that is returned by components (e.g. a custom headless CMS VDOM, and basically anything you can think of).
+This is a template for an Astro integration that implements a custom renderer. 
+The relevant code is implemented in:
 
-#### Invocation
-<img src="./invoke.png" />
+- `packages/custom-renderer` - the actual Astro Integration implementation
+- `example` - an Astro project using the `custom-renderer` 
 
-#### Custom Markup/VDOM
-<img src="./custom_functional_component.png" />
+## Setup
 
-#### Custom DOM rendering
-<img src="./render_result.png" />
+We use `pnpm` here, so please make sure it is installed.
 
-## 🚀 Project Structure
+```bash
+# 0. make sure pnpm is installed
+npm i -g pnpm
 
-Inside of your Astro project, you'll see the following folders and files:
+# 1. install dependencies
+pnpm i
 
-```text
-/
-├── src/components/CustomRendererTest.ts
-├── src/custom-renderer/client.ts
-├── src/custom-renderer/index.ts
-├── src/custom-renderer/server.ts
-├── src/pages/index.astro
-├── tsconfig.json
-├── package.json
+# 2. run the build (make sure custom renderer build output is generated/resolvable)
+pnpm run build
+
+# 3. switch to the example and run
+cd ./example
+
+# 4. dev mode
+pnpm run dev
+
+# OR
+
+# 5. prod mode 
+pnpm run build && pnpm run preview
+
 ```
-
-The `src/custom-renderer/index.ts` file is the "entry point" for your custom renderer integration. 
-The default exported function is used in `src/astro.config.mjs` as an integration.
-
-Client-side rendering of DOM sub-trees is implemented in `src/custom-renderer/client.ts` while
-`src/custom-renderer/server.ts` implements SSR rendering (HTML serialized rendering).
-
-The `src/pages/index.astro` demonstrates the various client directives to render Components
-that use the custom framework/custom renderer and `src/components/CustomRendererTest.ts` implements 
-one Component that shows the use of a custom markup/VDOM in use.
-
-If you plan to build and release your own custom renderer, it's of course adviced to only 
-include the implementation of the Astro integration and the renderer itself in the project,
-export the integration as the default entrypoint function and release the package via NPM.
 
 ## 🧞 Commands
 
@@ -46,6 +39,4 @@ All commands are run from the root of the project, from a terminal:
 
 | Command       | Action                                                                                                                                                                                                                           |
 | :------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `npm run dev`    | Run in dev mode and check your custom renderer                                                    |
-| `npm run build` | Build for production  |
-| `npm run preview` | Build for production, then preview |
+| `pnpm run build` | Build the `custom-renderer`  |
