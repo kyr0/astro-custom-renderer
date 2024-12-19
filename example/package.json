@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@astrojs/node": "^8.3.4",
-    "astro": "^4.16.12",
+    "astro": "^4.16.18",
     "custom-renderer": "workspace:*"
   },
   "packageManager": "pnpm@9.13.2"
